@@ -1,3 +1,6 @@
+  <!-- Botón flotante con mensaje sorpresa -->
+  <button class="btn-flotante" onclick="mostrarSorpresa()">💌</button>
+  <div id="sorpresa-msg" class="sorpresa-msg">Eres la razón de mi felicidad. ¡Te quiero mucho! 🌻</div>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -8,16 +11,15 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
   </head>
-  <body class="container">
+  <body class="container flower-bg">
     <audio src="sound/ChristianBasso&HaienQiu-Flowers.mp3" autoplay></audio>
     <div id="lyrics">
      
     </div>
     <h1 class="titulo">Estas flores amarillas son un reflejo de la alegría que traes a mi vida. <br> <br>
-      Gracias por iluminar mis días con tu presencia.</h1>
-
-    <div style="display: flex; justify-content: center; align-items: center; margin: 24px 0;">
-      <img src="novia.jpg.jpeg" alt="Flores Amarillas" style="max-width: 320px; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);" />
+      Gracias por iluminar mis días con tu presencia, se te aprecia mucho rosmery.</h1>
+    <div class="novia-img-container">
+      <img src="img/noviaxd.jpg.jpeg" alt="Flores Amarillas" class="novia-img" />
     </div>
   
     <div class="night"></div>
@@ -330,7 +332,16 @@
         </div>
       </div>
     </div>
+  <footer class="footer-flower">Con mucho amor 💛</footer>
     <script src="anim.js"></script>
     <script src="main.js"></script>
+    <script src="petals.js"></script>
+    <script>
+      function mostrarSorpresa() {
+        const msg = document.getElementById('sorpresa-msg');
+        msg.classList.add('visible');
+        setTimeout(() => msg.classList.remove('visible'), 3500);
+      }
+    </script>
   </body>
 </html>
